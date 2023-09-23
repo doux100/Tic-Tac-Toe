@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context=".GameStart">
+
+    <LinearLayout
+        android:id="@+id/playerOneLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="30dp"
+        android:padding="10dp"
+        android:background="@drawable/playerbackground"
+        app:layout_constraintEnd_toStartOf="@id/playerTwoLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:id="@+id/text_playerone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player one"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/x_vector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playerTwoLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="30dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/playerOneLayout"
+        app:layout_constraintTop_toTopOf="@id/playerOneLayout">
+
+        <TextView
+            android:id="@+id/text_playertwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="player one"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/o_vector" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="4dp"
+        android:layout_margin="10dp"
+        android:background="#501DAA"
+        app:layout_constraintTop_toBottomOf="@id/playerOneLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#2B0373"
+            android:weightSum="3">
+
+            <ImageView
+                android:onClick="click_sl1"
+                android:id="@+id/slot1"
+                android:layout_width="1dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:background="@drawable/boardbackground"
+                android:layout_margin="2dp"
+                 />
+
+            <ImageView
+                android:onClick="click_sl2"
+                android:id="@+id/slot2"
+                android:layout_width="0dp"
+                android:layout_margin="2dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:background="@drawable/boardbackground"
+                />
+
+            <ImageView
+                android:onClick="click_sl3"
+                android:id="@+id/slot3"
+                android:layout_width="0dp"
+                android:layout_margin="2dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:background="@drawable/boardbackground"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2B0373"
+            android:orientation="horizontal"
+
+            android:weightSum="3">
+
+            <ImageView
+                android:onClick="click_sl4"
+                android:id="@+id/slot4"
+                android:layout_width="0dp"
+                android:layout_margin="2dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:background="@drawable/boardbackground"
+                />
+
+            <ImageView
+                android:onClick="click_sl5"
+                android:id="@+id/slot5"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/boardbackground"
+                />
+
+            <ImageView
+                android:onClick="click_sl6"
+                android:id="@+id/slot6"
+                android:layout_margin="2dp"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:background="@drawable/boardbackground"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2B0373"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <ImageView
+                android:onClick="click_sl7"
+                android:id="@+id/slot7"
+                android:layout_margin="2dp"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:background="@drawable/boardbackground"
+                />
+
+            <ImageView
+                android:id="@+id/slot8"
+                android:onClick="click_sl8"
+                android:layout_width="0dp"
+                android:layout_margin="2dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:background="@drawable/boardbackground"
+                />
+
+            <ImageView
+                android:onClick="click_sl9"
+                android:id="@+id/slot9"
+                android:layout_margin="2dp"
+                android:layout_width="0dp"
+                android:layout_height="125dp"
+                android:layout_weight="1"
+                android:background="@drawable/boardbackground"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:onClick="onClickHome"
+        android:id="@+id/homeBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_home_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/startAgainBtn"
+        />
+    <ImageView
+        android:onClick="onClickStartAgain"
+        app:layout_constraintStart_toEndOf="@id/homeBtn"
+        android:id="@+id/startAgainBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_replay_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
