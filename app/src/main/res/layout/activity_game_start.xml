@@ -87,7 +87,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/boardbackground"
                 android:layout_margin="2dp"
-                 />
+                />
 
             <ImageView
                 android:onClick="click_sl2"
@@ -192,6 +192,7 @@
         android:id="@+id/homeBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/baseline_home_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -204,7 +205,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_replay_24"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/homeBtn"
         app:layout_constraintEnd_toEndOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
